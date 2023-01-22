@@ -103,8 +103,11 @@ function Navbar() {
         {window.localStorage.getItem('login') && <Link
         style={{'marginLeft':'60%'}}
         className='btn btn-outline-light'
-        onClick={()=>{window.localStorage.removeItem('login')}}
-        to='/'
+        onClick={()=>{
+        window.localStorage.removeItem('login')
+        window.location.replace('http://visionacademyindia.in/'
+        }}
+//         to='/'
         >
           Log Out
         </Link>}
