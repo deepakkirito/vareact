@@ -105,8 +105,7 @@ function Navbar() {
         className='btn btn-outline-light'
         onClick={()=>{
         window.localStorage.removeItem('login')
-        window.location.replace('http://visionacademyindia.in/'
-        }}
+        window.location.replace('http://visionacademyindia.in/')        }}
 //         to='/'
         >
           Log Out
