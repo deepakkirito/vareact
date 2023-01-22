@@ -1,0 +1,67 @@
+.Navbar {
+    // width: 40vw;
+    // width: fit-content;
+    background-color: #212529;
+
+    nav {
+        // width: 70%;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        a {
+
+            span {
+                margin: 2%;
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+
+            a {
+
+                &:hover {
+                    border-bottom: 2px solid whitesmoke;
+                    // border-radius: 5px;
+                }
+
+                &:focus {
+                    border-bottom: 2px solid whitesmoke;
+                    // border-radius: 5px;
+
+                }
+
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (min-width: 350px) and (max-width: 900px) {
+
+    .Navbar {
+        nav {
+            // width: 230%;
+            // padding-left: 5%;
+            // padding-right: 51%;
+
+            .logo {
+                font-size: 10px;
+                font-weight: bolder;
+
+                // width: 100px;
+                img {
+                    // width: 100%;
+                    width: 16px;
+                    height: auto;
+                }
+            }
+
+            a {
+                font-size: 11px;
+            }
+        }
+    }
+}
