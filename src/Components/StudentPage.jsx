@@ -47,17 +47,17 @@ function StudentPage() {
                 <div>
                     <ul className="nav nav-tabs">
                         <li className="nav-item">
-                            <Link
+                            <button
                                 aria-current="page"
-                                to='/Student/personal-information'
+                                // to='/Student'
                                 className={activeTab == 'Personal Information' ? 'nav-link active' : 'nav-link'}
-                            >Personal Information</Link>
+                            >Personal Information</button>
                         </li>
                         <li className="nav-item">
-                            <Link
+                            <button
                                 className={activeTab == 'Certification' ? 'nav-link active' : 'nav-link'}
-                                to='/Student/certification'
-                            >Certification</Link>
+                                // to='/Student'
+                            >Certification</button>
                         </li>
                     </ul>
 
