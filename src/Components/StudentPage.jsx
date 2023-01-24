@@ -27,28 +27,39 @@ function StudentPage() {
         }
     }, [activeTab])
 
-    const onButtonClick = () => {        
-        window.open('http://localhost:7000/get-pdf');
+    const onButtonClick = () => {
+        window.open('https://liveserver.glitch.me/get-pdf');
+    }
+
+    const logOut = () => {
+        window.location.replace('https://main.d343squto314ob.amplifyapp.com/vaHtml.html')
     }
 
     return (
         <div className={classes.StudentPage}>
             <nav onClick={e => setActiveTab(e.target.innerText)}>
-                <ul className="nav nav-tabs">
-                    <li className="nav-item">
-                        <Link
-                            aria-current="page"
-                            to='/Student/personal-information'
-                            className={activeTab == 'Personal Information' ? 'nav-link active' : 'nav-link'}
-                        >Personal Information</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link
-                            className={activeTab == 'Certification' ? 'nav-link active' : 'nav-link'}
-                            to='/Student/certification'
-                        >Certification</Link>
-                    </li>
-                </ul>
+                <div>
+                    <ul className="nav nav-tabs">
+                        <li className="nav-item">
+                            <Link
+                                aria-current="page"
+                                to='/Student/personal-information'
+                                className={activeTab == 'Personal Information' ? 'nav-link active' : 'nav-link'}
+                            >Personal Information</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className={activeTab == 'Certification' ? 'nav-link active' : 'nav-link'}
+                                to='/Student/certification'
+                            >Certification</Link>
+                        </li>
+                    </ul>
+
+                    <button
+                        className='btn btn-dark'
+                        onClick={logOut}
+                    >Log Out</button>
+                </div>
             </nav>
             {activeTab == 'Personal Information' && <form>
                 <div className={classes.leftS}>
@@ -64,9 +75,9 @@ function StudentPage() {
             </form>}
             {activeTab == 'Certification' && <section>
                 <img src={loginInfo.certificate} alt="Certificate" /> <br />
-                <button 
-                onClick={onButtonClick}
-                className='btn btn-secondary'
+                <button
+                    onClick={onButtonClick}
+                    className='btn btn-secondary'
                 >
                     Download PDF
                 </button>
