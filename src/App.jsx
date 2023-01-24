@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <div className="Overflow">
+      <div>
       <Routes>
         <Route path='/' element={<HomePage />} ></Route>
         <Route path='/Courses' element={<CoursesPage />} ></Route>
