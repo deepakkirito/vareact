@@ -12,18 +12,23 @@ function StudentPage() {
     const [loginInfo, setLoginInfo] = useState({});
     const navigate = useNavigate();
 
+    let user = window.location.search.split('?')[1];
+    if (user.includes('@')) {
+        user = user.split('@')[0];
+    }
+
     useEffect(() => {
         // navigate(`/Student/personal-information?${window.location.search.split('?')[1]}`, { replace: true })
-        axios.get(`${baseUrl}?user=${window.location.search.split('?')[1]}`).then(response => {
+        axios.get(`${baseUrl}?user=${user}`).then(response => {
             setLoginInfo(response.data[0]);
         })
     }, [])
 
     useEffect(() => {
         if (activeTab == 'Personal Information') {
-            navigate(`/Student/personal-information?${window.location.search.split('?')[1]}`, { replace: true })
+            navigate(`/Student/personal-information?${user}`, { replace: true })
         } else if (activeTab == 'Certification') {
-            navigate(`/Student/certification?${window.location.search.split('?')[1]}`, { replace: true })
+            navigate(`/Student/certification?${user}`, { replace: true })
         }
     }, [activeTab])
 
