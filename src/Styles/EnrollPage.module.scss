@@ -1,0 +1,23 @@
+
+.EnrollPage {
+    text-align: left;
+    // font-weight: bold;
+    label {
+
+        letter-spacing: 3px;
+    }
+    input {
+        font-size: 14px;
+
+    }
+
+    img {
+        border-top-left-radius: .25rem; 
+        border-bottom-left-radius: .25rem; 
+    }
+
+    select {
+        padding: 10px;
+        outline: none;
+    }
+}
