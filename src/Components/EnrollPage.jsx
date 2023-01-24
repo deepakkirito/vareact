@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import classes from '../Styles/EnrollPage.module.scss';
 
-const baseUrl = 'http://localhost:7000/enroll'
+const baseUrl = 'https://liveserver.glitch.me/enroll'
 
 function EnrollPage() {
 
@@ -170,14 +170,14 @@ function EnrollPage() {
                                     >
                                          Form Submitted Successfully. We'll get back to you Soon!!!
                                     </div>
-                                    <div className="d-flex justify-content-end pt-3">
+                                    <div className="d-flex justify-content-start pt-3">
                                         <img src="https://cdn-icons-png.flaticon.com/512/4461/4461744.png" alt="Loading" className={classes.loading}
                                             style={loading ? { 'display': 'flex' } : { 'display': 'none' }}></img>
                                         <button
                                             type="button"
                                             className="btn btn-warning btn-lg ms-2"
                                             onClick={submitForm}
-                                        disabled={Object.keys(formDetails).length < 12}
+                                            disabled={Object.keys(formDetails).length < 12}
                                         > Submit form </button>
                                     </div>
                                 </form>
