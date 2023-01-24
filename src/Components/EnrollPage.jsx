@@ -1,9 +1,4 @@
-import classes from '../Styles/EnrollPage.module.scss'
-
-function EnrollPage () {
-    return(
-        <div className={classes.EnrollPage}>
-            import axios from 'axios';
+import axios from 'axios';
 import { useState } from 'react';
 import classes from '../Styles/EnrollPage.module.scss';
 
@@ -13,11 +8,14 @@ function EnrollPage() {
 
     const [formDetails, setFormDetails] = useState({});
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const submitForm = () => {
+        setLoading(true);
         axios.post(baseUrl, formDetails).then(response => {
             console.log(response.data);
             if (response.data === 'inserted') {
+                setLoading(false);
                 setFormSubmitted(true)
                 setTimeout(() => {
                     window.location.reload();
@@ -169,17 +167,19 @@ function EnrollPage() {
                                                 <input type="text" id="pinCode" className="form-control form-control-lg" />
                                                 <label className="form-label" htmlFor="pinCode"> Pincode </label>
                                             </div>
-                                            <div className="d-flex justify-content-end pt-3">
                                                 <div className="alert alert-success" role="alert"
-                                                style={formSubmitted ?{'display':'flex'} : {'display':'none'}}
+                                                    style={formSubmitted ? { 'display': 'flex' } : { 'display': 'none' }}
                                                 >
                                                     Form Submitted Successfully!
                                                 </div>
+                                            <div className="d-flex justify-content-end pt-3">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/4461/4461744.png" alt="Loading" className={classes.loading}
+                                                    style={loading ? {'display':'flex'} : {'display':'none'}}></img>
                                                 <button
                                                     type="button"
                                                     className="btn btn-warning btn-lg ms-2"
                                                     onClick={submitForm}
-                                                    disabled={Object.keys(formDetails).length < 12}
+                                                    // disabled={Object.keys(formDetails).length < 12}
                                                 > Submit form </button>
                                             </div>
                                         </form>
@@ -190,11 +190,6 @@ function EnrollPage() {
                     </div>
                 </div>
             </section>
-        </div>
-    )
-}
-
-export default EnrollPage;
         </div>
     )
 }
