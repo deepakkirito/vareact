@@ -168,7 +168,7 @@ function EnrollPage() {
                                     <div className="alert alert-success" role="alert"
                                         style={formSubmitted ? { 'display': 'flex' } : { 'display': 'none' }}
                                     >
-                                        Form Submitted Successfully!
+                                         Form Submitted Successfully. We'll get back to you Soon!!!
                                     </div>
                                     <div className="d-flex justify-content-end pt-3">
                                         <img src="https://cdn-icons-png.flaticon.com/512/4461/4461744.png" alt="Loading" className={classes.loading}
