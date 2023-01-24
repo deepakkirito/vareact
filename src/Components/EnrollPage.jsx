@@ -177,7 +177,7 @@ function EnrollPage() {
                                             type="button"
                                             className="btn btn-warning btn-lg ms-2"
                                             onClick={submitForm}
-                                        // disabled={Object.keys(formDetails).length < 12}
+                                        disabled={Object.keys(formDetails).length < 12}
                                         > Submit form </button>
                                     </div>
                                 </form>
