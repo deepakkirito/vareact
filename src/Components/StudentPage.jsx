@@ -25,11 +25,11 @@ function StudentPage() {
     }, [])
 
     useEffect(() => {
-        if (activeTab == 'Personal Information') {
-            navigate(`/Student/personal-information?${user}`, { replace: true })
-        } else if (activeTab == 'Certification') {
-            navigate(`/Student/certification?${user}`, { replace: true })
-        }
+        // if (activeTab == 'Personal Information') {
+        //     navigate(`/Student/personal-information?${user}`, { replace: true })
+        // } else if (activeTab == 'Certification') {
+        //     navigate(`/Student/certification?${user}`, { replace: true })
+        // }
     }, [activeTab])
 
     const onButtonClick = () => {
