@@ -13,17 +13,17 @@ function StudentPage() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // navigate(`/Student/personal-information?${window.localStorage.getItem('login')}`, { replace: true })
-        axios.get(`${baseUrl}?user=${window.localStorage.getItem('login')}`).then(response => {
+        // navigate(`/Student/personal-information?${window.location.search.split('?')[1]}`, { replace: true })
+        axios.get(`${baseUrl}?user=${window.location.search.split('?')[1]}`).then(response => {
             setLoginInfo(response.data[0]);
         })
     }, [])
 
     useEffect(() => {
         if (activeTab == 'Personal Information') {
-            navigate(`/Student/personal-information?${window.localStorage.getItem('login')}`, { replace: true })
+            navigate(`/Student/personal-information?${window.location.search.split('?')[1]}`, { replace: true })
         } else if (activeTab == 'Certification') {
-            navigate(`/Student/certification?${window.localStorage.getItem('login')}`, { replace: true })
+            navigate(`/Student/certification?${window.location.search.split('?')[1]}`, { replace: true })
         }
     }, [activeTab])
 
