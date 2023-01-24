@@ -32,6 +32,7 @@ function StudentPage() {
     }
 
     const logOut = () => {
+        window.localStorage.removeItem('login');
         window.location.replace('https://main.d343squto314ob.amplifyapp.com/vaHtml.html')
     }
 
