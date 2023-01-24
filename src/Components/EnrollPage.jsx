@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import classes from '../Styles/EnrollPage.module.scss';
 
-const baseUrl = 'http://localhost:7000/enroll'
+const baseUrl = 'https://liveserver.glitch.me/enroll'
 
 function EnrollPage() {
 
