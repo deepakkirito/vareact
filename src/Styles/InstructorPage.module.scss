@@ -1,0 +1,20 @@
+.InstructorPage {
+    margin: 5%;
+    cursor: auto;
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        ul {
+            button {
+                color: rgba(0, 0, 0, 0.395);
+
+                &:hover {
+                    color: rgba(0, 0, 0);
+
+                }
+            }
+        }
+    }
+}

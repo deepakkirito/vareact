@@ -1,0 +1,32 @@
+.Enroll {
+    section {
+        width: 75%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .popup {
+        width: 40%;
+        position: absolute;
+        top: 20%;
+        left: 35vw;
+        opacity: 1;
+
+        input {
+            margin: 20px 0px;
+        }
+    }
+
+    
+    .EnrollCard {
+        width: 50%;
+        text-align: left;
+    }
+
+    p {
+        font-weight: bolder;
+        span {
+            font-weight: lighter;
+        }
+    }
+}
