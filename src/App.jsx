@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
-import HomePage from './Components/HomePage'
+import Home from './Components/Home'
 import CoursesPage from './Components/CoursesPage'
 import EnrollPage from './Components/EnrollPage'
 import AboutPage from './Components/AboutPage'
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <div>
       <Routes>
-        <Route path='/' element={<HomePage />} ></Route>
+        <Route path='/' element={<Home />} ></Route>
         <Route path='/Courses' element={<CoursesPage />} ></Route>
         <Route path='/Enroll' element={<EnrollPage />} ></Route>
         <Route path='/About' element={<AboutPage />} ></Route>
