@@ -12,11 +12,11 @@ import StudentPage from './Components/StudentPage'
 
 function App() {
   
-  setInterval(() => {
-    axios.get('http://liveserver.glitch.me').then(res => {
-      console.log(res);
-    })
-  }, 1000000);
+//   setInterval(() => {
+//     axios.get('http://liveserver.glitch.me').then(res => {
+//       console.log(res);
+//     })
+//   }, 1000000);
 
   return (
     <BrowserRouter>
