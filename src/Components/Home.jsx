@@ -10,10 +10,12 @@ function Home() {
 
     const [crousel, setCrousel] = useState([]);
     const [announcement, setAnnouncement] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         axios.get(`${baseUrl}crousel`).then(res => {
             setCrousel(res.data);
+            setLoading(true)
         })
         axios.get(`${baseUrl}announcement`).then(res => {
             setAnnouncement(res.data);
@@ -26,7 +28,10 @@ function Home() {
     return (
         <div className={classes.Home}>
             <header>
-                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div 
+                id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel"
+                style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                >
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -58,18 +63,36 @@ function Home() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/4461/4461744.png"
+                    alt="Loading"
+                    id="loading"
+                    className={classes.loading}
+                    style={!loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                    />
             </header>
             <section>
-                <div className={classes.right}>
+                <div 
+                className={classes.right}
+                >
                     <h3>Academy Announcement</h3>
                     <div>
                         {announcement != 0 && announcement.map(a => {
                             return <p>{a.announcement}</p>
                         })}
                     </div>
-                    <div>
+                    <div
+                        style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                    >
                         {announcement.length == 0 && <p>No New Announcements</p>}
                     </div>
+                    <img
+                    src="https://cdn-icons-png.flaticon.com/512/4461/4461744.png"
+                    alt="Loading"
+                    id="loading"
+                    className={classes.loading}
+                    style={!loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                />
                 </div>
             </section>
         </div>
