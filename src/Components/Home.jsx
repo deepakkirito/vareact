@@ -30,7 +30,7 @@ function Home() {
             <header>
                 <div 
                 id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel"
-                style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                style={loading ? { 'display': 'flex' } : { 'display': 'none' }}
                 >
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -82,7 +82,7 @@ function Home() {
                         })}
                     </div>
                     <div
-                        style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
+                        style={loading ? { 'display': 'flex' } : { 'display': 'none' }}
                     >
                         {announcement.length == 0 && <p>No New Announcements</p>}
                     </div>
