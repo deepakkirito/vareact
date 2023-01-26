@@ -30,11 +30,18 @@ function Home() {
             <header>
                 <div 
                 id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel"
-                style={loading ? { 'display': 'flex' } : { 'display': 'none' }}
+                style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
                 >
                     <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        {crousel.length != 0 && crousel.map((p,i)=>{
+                            if(i) {
+
+                                return <button key={i} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={i} aria-label={`Slide ${i+1}`}></button>
+                            } else {
+
+                                return <button key={i} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={i} className="active" aria-current="true" aria-label={`Slide ${i+1}`}></button>
+                            }
+                        })}
                     </div>
                     <div className="carousel-inner">
                         {crousel.length != 0 && crousel.map((p, i) => {
@@ -82,7 +89,7 @@ function Home() {
                         })}
                     </div>
                     <div
-                        style={loading ? { 'display': 'flex' } : { 'display': 'none' }}
+                        style={loading ? { 'display': 'inline-block' } : { 'display': 'none' }}
                     >
                         {announcement.length == 0 && <p>No New Announcements</p>}
                     </div>
