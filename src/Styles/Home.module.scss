@@ -4,6 +4,11 @@
     justify-content: space-around;
     flex-wrap: nowrap;
 
+    .loading {
+        width: 50px;
+        padding: 100px;
+    }
+
     header {
 
         box-shadow: 0px 0px 5px black;
