@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import classes from '../Styles/LoginPage.module.scss'
 
-const baseUrl = 'https://liveserver-x7b0.onrender.com/admin'
+const baseUrl = 'https://liveserver.glitch.me/admin'
 
 function LoginPage() {
 
