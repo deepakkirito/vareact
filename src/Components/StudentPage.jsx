@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { saveAs } from 'file-saver'
 import classes from '../Styles/StudentPage.module.scss'
 
-const baseUrl = 'https://liveserver.glitch.me/login-info'
+const baseUrl = 'https://liveserver-x7b0.onrender.com/login-info'
 
 function StudentPage() {
 
