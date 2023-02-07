@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import classes from '../Styles/HomePage.module.scss'
 
-const baseUrl = 'https://liveserver.glitch.me/crousel'
+const baseUrl = 'https://liveserver-x7b0.onrender.com/crousel'
 
 function HomePage() {
 
