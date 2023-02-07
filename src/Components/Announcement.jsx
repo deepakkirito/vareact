@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import classes from '../Styles/Announcement.module.scss';
 
-const baseUrl = 'https://liveserver.glitch.me/';
+const baseUrl = 'https://liveserver-x7b0.onrender.com/';
 
 function Announcement(props) {
 
