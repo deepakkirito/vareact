@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import classes from '../Styles/Home.module.scss';
 
-const baseUrl = 'https://liveserver.glitch.me/'
+const baseUrl = 'https://liveserver-x7b0.onrender.com/'
 
 
 function Home() {
