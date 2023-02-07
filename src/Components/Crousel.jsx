@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from '../Styles/Crousel.module.scss'
 
-const baseUrl = 'https://liveserver.glitch.me/';
+const baseUrl = 'https://liveserver-x7b0.onrender.com/';
 
 function Crousel(props) {
 
