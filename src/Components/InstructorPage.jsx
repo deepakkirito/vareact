@@ -10,7 +10,7 @@ import Announcement from './Announcement';
 import Courses from './Courses';
 import classes from '../Styles/InstructorPage.module.scss';
 
-const baseUrl = 'https://liveserver.glitch.me/';
+const baseUrl = 'https://liveserver-x7b0.onrender.com/';
 
 function InstructorPage() {
 
