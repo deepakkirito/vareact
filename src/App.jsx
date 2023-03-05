@@ -21,8 +21,8 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <div>
     Updation is in progress...
+//       <div>
 //       <Routes>
 //         <Route path='/' element={<Home />} ></Route>
 //         <Route path='/Courses' element={<CoursesPage />} ></Route>
@@ -31,7 +31,7 @@ function App() {
 //         <Route path='/Login' element={<LoginPage />} ></Route>
 //         <Route path='/Student' element={<StudentPage />} ></Route>
 //       </Routes>
-      </div>
+//       </div>
     </div>
     </BrowserRouter>
   );
