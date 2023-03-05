@@ -22,14 +22,15 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <div>
-      <Routes>
-        <Route path='/' element={<Home />} ></Route>
-        <Route path='/Courses' element={<CoursesPage />} ></Route>
-        <Route path='/Enroll' element={<EnrollPage />} ></Route>
-        <Route path='/Instructor' element={<InstructorPage />} ></Route>
-        <Route path='/Login' element={<LoginPage />} ></Route>
-        <Route path='/Student' element={<StudentPage />} ></Route>
-      </Routes>
+    Updation is in progress...
+//       <Routes>
+//         <Route path='/' element={<Home />} ></Route>
+//         <Route path='/Courses' element={<CoursesPage />} ></Route>
+//         <Route path='/Enroll' element={<EnrollPage />} ></Route>
+//         <Route path='/Instructor' element={<InstructorPage />} ></Route>
+//         <Route path='/Login' element={<LoginPage />} ></Route>
+//         <Route path='/Student' element={<StudentPage />} ></Route>
+//       </Routes>
       </div>
     </div>
     </BrowserRouter>
